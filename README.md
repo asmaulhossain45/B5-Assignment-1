@@ -31,3 +31,38 @@ function throwError(message: string): never {
   throw new Error(message);
 }
 ```
+
+## Example of using union and intersection types in TypeScript.
+
+### Union Types
+
+The union type let us to declare more than single type of value. Then we can use the varibale value either one type or another. We use | symbol for accept multiple type and its work like "or". So if we are not sure what type of value will be then we can accept or allow multiple type using union type.
+
+```
+let value: string | number;
+
+value = "Hello";
+value = 32614;
+
+```
+
+### Intersection Types
+
+The intersection type give us the power to combine multiple types into a single type.  When we use intersection, the variable must have all the properties from each type. We use the & symbol for intersection, and it works like "and".
+
+```
+interface Boy {
+  name: string;
+}
+
+interface Student {
+  education: string;
+}
+
+let example: Boy & Student = {
+  name: "Alif",
+  education: "HSC",
+};
+
+
+```
